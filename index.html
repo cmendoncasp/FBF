@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Load Booster 24,5 kV &mdash; ferramenta port&aacute;til para abertura de circuitos el&eacute;tricos sob carga." name="description"/>
+  <title>
+   Load Booster 24,5 kV | FBF
+  </title>
+  <style>
+   :root {
+  --navy: #08285b;
+  --blue: #103b78;
+  --orange: #f2380a;
+  --ink: #182235;
+  --muted: #657083;
+  --paper: #f4f6f9;
+  --line: #e4e9f0
+}
+
+* {
+  box-sizing: border-box
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  margin: 0;
+  font-family: Inter,Segoe UI,Arial,sans-serif;
+  color: var(--ink);
+  background: #fff;
+  line-height: 1.55
+}
+
+a {
+  color: inherit
+}
+
+.topline {
+  height: 8px;
+  background: var(--orange)
+}
+
+header {
+  background: var(--navy);
+  color: #fff;
+  padding: 18px max(5vw,24px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 900;
+  letter-spacing: .14em
+}
+
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 13px
+}
+
+.brand small {
+  display: block;
+  font-size: 9px;
+  letter-spacing: .1em;
+  font-weight: 500;
+  opacity: .8
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+  color: #e4ebf8
+}
+
+nav a {
+  text-decoration: none
+}
+
+.hero {
+  background: radial-gradient(ellipse at 75% 35%,#e8edf4 0,transparent 45%),linear-gradient(120deg,#f6f7f9,#fff 60%);
+  padding: 72px max(5vw,24px) 66px;
+  position: relative;
+  overflow: hidden
+}
+
+.hero: after {
+  content: "";
+  position: absolute;
+  right: -100px;
+  bottom: -180px;
+  width: 520px;
+  height: 320px;
+  border: 34px solid rgba(242,56,10,.09);
+  border-radius: 50%;
+  transform: rotate(-12deg)
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  color: var(--orange);
+  font-weight: 800;
+  letter-spacing: .17em;
+  font-size: 12px
+}
+
+.hero-grid {
+  max-width: 1180px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.02fr .98fr;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  z-index: 1
+}
+
+h1 {
+  font-size: clamp(42px,5.3vw,70px);
+  line-height: .98;
+  letter-spacing: -.045em;
+  color: var(--navy);
+  margin: 17px 0 20px
+}
+
+h1 span {
+  color: var(--orange)
+}
+
+.lead {
+  font-size: 18px;
+  color: #475267;
+  max-width: 580px
+}
+
+.pills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 25px 0
+}
+
+.pill {
+  background: #e9eef6;
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 8px 12px;
+  border-radius: 999px
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: #25D366;
+  color: #fff;
+  padding: 14px 21px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: 0 9px 22px #25D36638;
+  transition: transform .2s,background .2s
+}
+
+.cta: hover {
+  background: #1fb95a;
+  transform: translateY(-2px)
+}
+
+.whatsapp-icon {
+  width: 21px;
+  height: 21px;
+  flex: 0 0 21px;
+  fill: currentColor
+}
+
+.hero-image {
+  background: white;
+  border: 1px solid #e9edf2;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 22px 70px #08285b14;
+  min-height: 360px;
+  display: grid;
+  place-items: center
+}
+
+.hero-image img {
+  width: 100%;
+  max-height: 360px;
+  object-fit: contain
+}
+
+.image-note {
+  font-size: 11px;
+  color: #8992a2;
+  text-align: center;
+  margin-top: 8px
+}
+
+.section {
+  padding: 72px max(5vw,24px)
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: auto
+}
+
+.section-head {
+  max-width: 720px;
+  margin-bottom: 32px
+}
+
+h2 {
+  font-size: clamp(28px,3.4vw,42px);
+  letter-spacing: -.035em;
+  line-height: 1.1;
+  color: var(--navy);
+  margin: 10px 0 14px
+}
+
+.section-head p {
+  color: var(--muted);
+  font-size: 16px
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px
+}
+
+.feature {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+  background: white
+}
+
+.feature .num {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .12em;
+  color: var(--orange)
+}
+
+.feature h3 {
+  color: var(--navy);
+  margin: 12px 0 8px;
+  font-size: 18px
+}
+
+.feature p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0
+}
+
+.specs {
+  background: var(--navy);
+  color: white
+}
+
+.specs h2 {
+  color: white
+}
+
+.specs .section-head p {
+  color: #c6d2e5
+}
+
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 12px;
+  margin-top: 28px
+}
+
+.spec {
+  padding: 22px;
+  border: 1px solid #ffffff2b;
+  border-radius: 14px;
+  background: #ffffff0b
+}
+
+.spec strong {
+  display: block;
+  font-size: clamp(25px,3vw,36px);
+  color: #fff;
+  letter-spacing: -.04em
+}
+
+.spec span {
+  font-size: 12px;
+  color: #c8d6ea
+}
+
+.spec-note {
+  font-size: 12px;
+  color: #c8d6ea;
+  margin-top: 20px;
+  max-width: 850px
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px
+}
+
+.gallery-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  background: #f5f7fa
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  padding: 22px;
+  background: #f7f8fa
+}
+
+.gallery-card .caption {
+  padding: 17px 20px;
+  background: white
+}
+
+.caption strong {
+  color: var(--navy);
+  display: block
+}
+
+.caption span {
+  font-size: 13px;
+  color: var(--muted)
+}
+
+.applications {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 44px;
+  align-items: center
+}
+
+.applications-visual {
+  background: #f3f5f8;
+  border-radius: 22px;
+  padding: 24px
+}
+
+.applications-visual img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: contain
+}
+
+.checklist {
+  list-style: none;
+  margin: 24px 0;
+  padding: 0
+}
+
+.checklist li {
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 12px
+}
+
+.check {
+  flex: 0 0 25px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff0eb;
+  color: var(--orange);
+  display: grid;
+  place-items: center;
+  font-weight: 900
+}
+
+.notice {
+  background: #fff6f1;
+  border-left: 4px solid var(--orange);
+  padding: 16px 18px;
+  border-radius: 0 10px 10px 0;
+  font-size: 13px;
+  color: #5b4b45
+}
+
+.contact {
+  background: #f3f6fa;
+  padding: 62px max(5vw,24px)
+}
+
+.contact-card {
+  max-width: 1180px;
+  margin: auto;
+  border-radius: 22px;
+  background: white;
+  padding: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border: 1px solid var(--line)
+}
+
+.contact-card h2 {
+  margin-top: 0
+}
+
+footer {
+  background: #061d43;
+  color: #d5dfef;
+  padding: 24px max(5vw,24px);
+  font-size: 12px
+}
+
+footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap
+}
+
+.tiny {
+  font-size: 11px;
+  color: #7d8796
+}
+
+@media(max-width: 800px) {
+  nav {
+  display: none
+}
+
+.hero-grid,.applications {
+  grid-template-columns: 1fr
+}
+
+.hero {
+  padding-top: 48px
+}
+
+.hero-image {
+  min-height: 260px
+}
+
+.feature-grid {
+  grid-template-columns: 1fr
+}
+
+.spec-grid {
+  grid-template-columns: 1fr 1fr
+}
+
+.gallery {
+  grid-template-columns: 1fr
+}
+
+.contact-card {
+  display: block;
+  padding: 26px
+}
+
+}
+
+@media(max-width: 430px) {
+  .spec-grid {
+  grid-template-columns: 1fr 1fr
+}
+
+.section {
+  padding-top: 52px;
+  padding-bottom: 52px
+}
+
+}
+  </style>
+ </head>
+ <body>
+  <div class="topline">
+  </div>
+  <header>
+   <div class="brand">
+    <div class="brand-mark">
+     FBF
+    </div>
+    <div>
+     FBF
+     <small>
+      EQUIPAMENTOS E FERRAMENTAS
+     </small>
+    </div>
+   </div>
+   <nav>
+    <a href="#produto">
+     Produto
+    </a>
+    <a href="#beneficios">
+     Caracter&iacute;sticas
+    </a>
+    <a href="#dados">
+     Dados t&eacute;cnicos
+    </a>
+    <a href="#aplicacoes">
+     Aplica&ccedil;&otilde;es
+    </a>
+   </nav>
+  </header>
+  <main>
+   <section class="hero" id="produto">
+    <div class="hero-grid">
+     <div>
+      <div class="eyebrow">
+       Equipamentos para rede el&eacute;trica
+      </div>
+      <h1>
+       LOAD BOOSTER
+       <br/>
+       <span>
+        24,5 kV
+       </span>
+      </h1>
+      <p class="lead">
+       Ferramenta port&aacute;til para abertura de circuitos sob carga, desenvolvida para apoiar manobras em equipamentos compat&iacute;veis de redes de distribui&ccedil;&atilde;o el&eacute;trica.
+      </p>
+      <div class="pills">
+       <span class="pill">
+        At&eacute; 24,5 kV nominal*
+       </span>
+       <span class="pill">
+        600 A nominal*
+       </span>
+       <span class="pill">
+        900 A m&aacute;ximo*
+       </span>
+      </div>
+      <!-- CONFIGURE O NÚMERO: substitua 55DDDNUMERO pelo telefone comercial com código do Brasil (55), DDD e número, somente dígitos. Ex.: 5511999999999 -->
+      <a aria-label="Solicitar informa&ccedil;&otilde;es pelo WhatsApp" class="cta" href="#contato-whatsapp" rel="noopener" target="_blank">
+       <svg aria-hidden="true" class="whatsapp-icon" viewbox="0 0 32 32">
+        <path d="M16 .8A15.1 15.1 0 0 0 3.05 23.67L1 31l7.52-1.97A15.2 15.2 0 1 0 16 .8Zm0 27.6a12.4 12.4 0 0 1-6.32-1.73l-.45-.27-4.46 1.17 1.19-4.35-.29-.46A12.38 12.38 0 1 1 16 28.4Zm6.8-9.27c-.37-.18-2.18-1.08-2.52-1.2-.34-.13-.58-.18-.83.18-.25.37-.95 1.2-1.17 1.45-.21.25-.43.28-.8.1-.37-.18-1.56-.57-2.97-1.82-1.1-.98-1.84-2.19-2.06-2.56-.21-.37-.02-.57.16-.75.16-.16.37-.43.55-.64.19-.22.25-.37.37-.62.12-.25.06-.46-.03-.64-.1-.18-.83-1.99-1.14-2.72-.3-.72-.6-.62-.83-.63h-.71c-.25 0-.65.09-.99.46-.34.37-1.3 1.27-1.3 3.08s1.33 3.57 1.51 3.82c.19.25 2.62 4 6.35 5.61.89.38 1.58.61 2.12.78.89.28 1.7.24 2.34.15.71-.1 2.18-.89 2.49-1.75.31-.86.31-1.6.22-1.75-.1-.15-.34-.24-.71-.43Z">
+        </path>
+       </svg>
+       Solicitar pelo WhatsApp
+      </a>
+      <p class="tiny">
+       *Valores indicados no material de refer&ecirc;ncia; confirmar ficha t&eacute;cnica e compatibilidade do modelo fornecido pela FBF.
+      </p>
+     </div>
+     <div>
+      <div class="hero-image">
+       <img alt="Load Booster 24,5 kV apresentado no cat&aacute;logo da FBF" src="load_booster_24_5kv_fbf_assets/load_booster_imagem_1.png"/>
+      </div>
+      <div class="image-note">
+       Imagem do produto recortada do cat&aacute;logo fornecido.
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="beneficios">
+    <div class="wrap">
+     <div class="section-head">
+      <div class="eyebrow">
+       Manobra com controle
+      </div>
+      <h2>
+       Uma ferramenta para opera&ccedil;&otilde;es especializadas em redes el&eacute;tricas
+      </h2>
+      <p>
+       O dispositivo cria um caminho controlado para interromper a corrente durante a abertura de equipamentos compat&iacute;veis, quando utilizado conforme os procedimentos e limites definidos pelo fabricante.
+      </p>
+     </div>
+     <div class="feature-grid">
+      <article class="feature">
+       <div class="num">
+        01 / OPERA&Ccedil;&Atilde;O
+       </div>
+       <h3>
+        Abertura sob carga
+       </h3>
+       <p>
+        Projetada para auxiliar a interrup&ccedil;&atilde;o de corrente em manobras de seccionamento, dentro da classe de tens&atilde;o e capacidade do conjunto.
+       </p>
+      </article>
+      <article class="feature">
+       <div class="num">
+        02 / APLICA&Ccedil;&Atilde;O
+       </div>
+       <h3>
+        Uso com acess&oacute;rios compat&iacute;veis
+       </h3>
+       <p>
+        Ferramentas desta categoria s&atilde;o empregadas com equipamentos que possuam ganchos e interfaces apropriados para a opera&ccedil;&atilde;o.
+       </p>
+      </article>
+      <article class="feature">
+       <div class="num">
+        03 / ROTINA
+       </div>
+       <h3>
+        Agilidade em campo
+       </h3>
+       <p>
+        Uma solu&ccedil;&atilde;o port&aacute;til que pode apoiar opera&ccedil;&otilde;es de manuten&ccedil;&atilde;o e manobra em sistemas de distribui&ccedil;&atilde;o, conforme an&aacute;lise t&eacute;cnica.
+       </p>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="section specs" id="dados">
+    <div class="wrap">
+     <div class="section-head">
+      <div class="eyebrow">
+       Resumo t&eacute;cnico
+      </div>
+      <h2>
+       Dados t&eacute;cnicos em destaque
+      </h2>
+      <p>
+       Refer&ecirc;ncia inicial transcrita do cat&aacute;logo enviado. A ficha t&eacute;cnica oficial do modelo exato deve prevalecer para especifica&ccedil;&atilde;o, compra e opera&ccedil;&atilde;o.
+      </p>
+     </div>
+     <div class="spec-grid">
+      <div class="spec">
+       <strong>
+        24,5 kV
+       </strong>
+       <span>
+        Tens&atilde;o nominal indicada no t&iacute;tulo do produto
+       </span>
+      </div>
+      <div class="spec">
+       <strong>
+        14&ndash;25 kV
+       </strong>
+       <span>
+        Faixa de opera&ccedil;&atilde;o descrita no cat&aacute;logo
+       </span>
+      </div>
+      <div class="spec">
+       <strong>
+        600 A
+       </strong>
+       <span>
+        Corrente nominal indicada
+       </span>
+      </div>
+      <div class="spec">
+       <strong>
+        900 A
+       </strong>
+       <span>
+        Corrente m&aacute;xima indicada
+       </span>
+      </div>
+     </div>
+     <p class="spec-note">
+      Importante: valores de tens&atilde;o e corrente dependem do modelo, da configura&ccedil;&atilde;o da rede e dos equipamentos associados. N&atilde;o utilizar estes dados como autoriza&ccedil;&atilde;o de opera&ccedil;&atilde;o. Solicite &agrave; FBF a ficha t&eacute;cnica, o fabricante, o c&oacute;digo do modelo, os limites de aplica&ccedil;&atilde;o e os procedimentos oficiais.
+     </p>
+    </div>
+   </section>
+   <section class="section">
+    <div class="wrap">
+     <div class="section-head">
+      <div class="eyebrow">
+       Detalhes visuais
+      </div>
+      <h2>
+       Conhe&ccedil;a a ferramenta
+      </h2>
+      <p>
+       Imagens complementares de refer&ecirc;ncia ajudam a visualizar a categoria do equipamento e seus componentes. Elas n&atilde;o devem ser interpretadas como confirma&ccedil;&atilde;o de que o modelo ilustrado &eacute; o mesmo produto comercializado pela FBF.
+      </p>
+     </div>
+     <div class="gallery">
+      <div class="gallery-card">
+       <img alt="Exemplo de ferramenta port&aacute;til de abertura sob carga da S&amp;C" loading="lazy" src="https://www.sandc.com.br/globalassets/sac-electric/images/product-headers/loadbuster-tool-811-030201-1.jpg"/>
+       <div class="caption">
+        <strong>
+         Vista geral &mdash; imagem de refer&ecirc;ncia
+        </strong>
+        <span>
+         Imagem publicada pela S&amp;C fabricante/modelo diferente ou n&atilde;o confirmado.
+        </span>
+       </div>
+      </div>
+      <div class="gallery-card">
+       <img alt="Vista explodida de componentes internos de uma ferramenta Loadbuster" loading="lazy" src="https://www.sandc.com.br/globalassets/sac-electric/accordion-panels/loadbuster-tool/loadbuster_expanded-view.png"/>
+       <div class="caption">
+        <strong>
+         Componentes internos &mdash; refer&ecirc;ncia ilustrativa
+        </strong>
+        <span>
+         Vista explodida de ferramenta S&amp;C Loadbuster, n&atilde;o uma vista t&eacute;cnica confirmada do produto FBF.
+        </span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="aplicacoes">
+    <div class="wrap applications">
+     <div class="applications-visual">
+      <img alt="Ferramenta Load Booster 24,5 kV do cat&aacute;logo FBF" src="load_booster_24_5kv_fbf_assets/load_booster_imagem_2.png"/>
+     </div>
+     <div>
+      <div class="eyebrow">
+       Onde pode ser aplicado
+      </div>
+      <h2>
+       Aplica&ccedil;&otilde;es em redes de distribui&ccedil;&atilde;o
+      </h2>
+      <p>
+       Ferramentas de abertura sob carga dessa categoria podem ser utilizadas, conforme especifica&ccedil;&atilde;o e compatibilidade, em atividades como:
+      </p>
+      <ul class="checklist">
+       <li>
+        <span class="check">
+         &checkmark;
+        </span>
+        <span>
+         <strong>
+          Chaves seccionadoras e chaves fus&iacute;veis
+         </strong>
+         <br/>
+         <span class="tiny">
+          Quando equipadas com interfaces adequadas para a ferramenta.
+         </span>
+        </span>
+       </li>
+       <li>
+        <span class="check">
+         &checkmark;
+        </span>
+        <span>
+         <strong>
+          Manobras associadas a transformadores e linhas
+         </strong>
+         <br/>
+         <span class="tiny">
+          Respeitando os limites de corrente e as condi&ccedil;&otilde;es da instala&ccedil;&atilde;o.
+         </span>
+        </span>
+       </li>
+       <li>
+        <span class="check">
+         &checkmark;
+        </span>
+        <span>
+         <strong>
+          Opera&ccedil;&otilde;es de manuten&ccedil;&atilde;o em distribui&ccedil;&atilde;o
+         </strong>
+         <br/>
+         <span class="tiny">
+          Conduzidas por profissionais habilitados e treinados.
+         </span>
+        </span>
+       </li>
+      </ul>
+      <div class="notice">
+       <strong>
+        Seguran&ccedil;a:
+       </strong>
+       equipamento destinado a uso profissional especializado. A opera&ccedil;&atilde;o exige treinamento, procedimentos aprovados, equipamentos de prote&ccedil;&atilde;o e confirma&ccedil;&atilde;o da compatibilidade el&eacute;trica e mec&acirc;nica. Consulte sempre o manual do fabricante.
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="contact" id="contato">
+    <div class="contact-card">
+     <div>
+      <div class="eyebrow">
+       Atendimento comercial
+      </div>
+      <h2>
+       Precisa da ficha t&eacute;cnica deste modelo?
+      </h2>
+      <p>
+       Entre em contato com a FBF para confirmar fabricante, c&oacute;digo do produto, disponibilidade, acess&oacute;rios e documenta&ccedil;&atilde;o t&eacute;cnica.
+      </p>
+     </div>
+     <a aria-label="Falar com a FBF pelo WhatsApp" class="cta" href="#contato-whatsapp" rel="noopener" target="_blank">
+      <svg aria-hidden="true" class="whatsapp-icon" viewbox="0 0 32 32">
+       <path d="M16 .8A15.1 15.1 0 0 0 3.05 23.67L1 31l7.52-1.97A15.2 15.2 0 1 0 16 .8Zm0 27.6a12.4 12.4 0 0 1-6.32-1.73l-.45-.27-4.46 1.17 1.19-4.35-.29-.46A12.38 12.38 0 1 1 16 28.4Zm6.8-9.27c-.37-.18-2.18-1.08-2.52-1.2-.34-.13-.58-.18-.83.18-.25.37-.95 1.2-1.17 1.45-.21.25-.43.28-.8.1-.37-.18-1.56-.57-2.97-1.82-1.1-.98-1.84-2.19-2.06-2.56-.21-.37-.02-.57.16-.75.16-.16.37-.43.55-.64.19-.22.25-.37.37-.62.12-.25.06-.46-.03-.64-.1-.18-.83-1.99-1.14-2.72-.3-.72-.6-.62-.83-.63h-.71c-.25 0-.65.09-.99.46-.34.37-1.3 1.27-1.3 3.08s1.33 3.57 1.51 3.82c.19.25 2.62 4 6.35 5.61.89.38 1.58.61 2.12.78.89.28 1.7.24 2.34.15.71-.1 2.18-.89 2.49-1.75.31-.86.31-1.6.22-1.75-.1-.15-.34-.24-.71-.43Z">
+       </path>
+      </svg>
+      Falar pelo WhatsApp
+     </a>
+    </div>
+   </section>
+  </main>
+  <footer>
+   <div class="wrap">
+    <span>
+     <strong>
+      FBF | Equipamentos para rede el&eacute;trica
+     </strong>
+    </span>
+    <span>
+     Apresenta&ccedil;&atilde;o de produto &bull; Load Booster 24,5 kV
+    </span>
+    <span>
+     Imagens externas de refer&ecirc;ncia creditadas aos seus respectivos titulares.
+    </span>
+   </div>
+  </footer>
+  <script>
+   // CONFIGURACAO DO WHATSAPP: altere somente esta linha.
+  // Use codigo do pais + DDD + numero, apenas digitos. Exemplo ficticio: 5511999999999
+  const WHATSAPP_NUMBER = "55DDDNUMERO";
+
+  // Mensagem que aparecera pronta no WhatsApp do visitante. Ele ainda precisara tocar em Enviar.
+  const WHATSAPP_MESSAGE = "Olá! Tenho interesse no Load Booster 24,5 kV da FBF. Poderia me enviar mais informações e a ficha técnica?";
+
+  // Monta os links dos botoes usando o numero e a mensagem acima.
+  document.querySelectorAll('a.cta[href="#contato-whatsapp"]').forEach(function (botao) {
+    botao.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(WHATSAPP_MESSAGE);
+    botao.target = "_blank";
+    botao.rel = "noopener";
+  });
+  </script>
+ </body>
+</html>
